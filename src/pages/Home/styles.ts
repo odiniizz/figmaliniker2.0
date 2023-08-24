@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import { colors } from "../../styles/GlobalStyle"
 
 export const Section=styled.section`
 
 
 body {
-    background-color: #595959;
+    background-color: black;
 }
 
     .capas {
@@ -20,6 +19,12 @@ body {
         padding-inline: 30rem;
         align-items: center;
         height: 50rem;
+    }
+
+    #hhome {
+        font-size: 80px;
+        text-align: center;
+        font-family: 'Tulpen One', cursive;
     }
 
 

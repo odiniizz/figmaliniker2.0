@@ -6,7 +6,7 @@ export const Header = styled.header`
     text-align: center;
     
     img {
-        height: 150%;
+        height: 4rem;
         padding: 1rem;
     }
 

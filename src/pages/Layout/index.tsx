@@ -5,7 +5,6 @@ import * as S from "./styles"
 export function Layout() {
     return (
         <>
-            <ComponentHeader />
             <S.Fundo>
                 <Outlet />
             </S.Fundo>
