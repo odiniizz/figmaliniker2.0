@@ -4,7 +4,7 @@ export const Section=styled.section`
 
 
 body {
-    background-color: black;
+    
 }
 
     .capas {
@@ -21,11 +21,21 @@ body {
         height: 50rem;
     }
 
-    #hhome {
-        font-size: 80px;
+    .pinformation {
+        font-family: 'PT Serif', serif;
+        font-weight: 400;
+        font-size: 1.4rem;
         text-align: center;
-        font-family: 'Tulpen One', cursive;
+        
     }
+
+    .figcaption{
+    padding: 3px;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+
 
 
 `

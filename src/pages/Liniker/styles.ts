@@ -2,17 +2,28 @@ import styled from "styled-components"
 
 export const Section = styled.section `
     
-    body{
-    border-radius: 30px;
- background: linear-gradient(180deg, rgba(94, 231, 223, 0.73) 0%, rgba(210, 153, 194, 0.28) 100%);
- min-height: 100vh;
-}
+background: rgb(242,107,207);
+background: linear-gradient(180deg, rgba(84,230,238,1) 0%, rgba(242,107,207,1) 86%);
 
+.capas {
+        border-radius: 50%;
+        height: 15rem;
+    }
 
+    
+    div {
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+        padding-inline: 30rem;
+        align-items: center;
+        height: 50rem;
+    }
 
-div{
-    display: flex;
-    justify-content: center;
-    margin-top: 27vh;
+.figcaption{
+    padding: 3px;
+    text-align: center;
+    font-size: 25px;
+    color: black;
 }
 `

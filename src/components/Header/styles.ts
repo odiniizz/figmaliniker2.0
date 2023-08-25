@@ -2,12 +2,11 @@ import styled from "styled-components"
 
 export const Header = styled.header`
     
-    height: 4rem;
-    text-align: center;
-    
-    img {
-        height: 4rem;
-        padding: 1rem;
+    h1 {
+        font-size: 80px;
+        text-align: center;
+        font-family: 'Tulpen One', cursive;
+        font-weight: 200;
     }
 
 `

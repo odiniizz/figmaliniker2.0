@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import { PageLayout, PageHome, PageLiniker, PageMliniker, PageVcliniker } from "../pages"
+import { PageLayout, PageHome, PageLiniker, PageMliniker, PageVcliniker, PagePerfilvazio } from "../pages"
 
 
 
@@ -11,6 +11,7 @@ export function RouteSoftware() {
                 <Route path="/Liniker" element={<PageLiniker/>} />
                 <Route path="/Mliniker" element={<PageMliniker/>} />
                 <Route path="/Vcliniker" element={<PageVcliniker/>} />
+                <Route path="/Perfilvazio" element={<PagePerfilvazio/>} />
 
             </Route>
             

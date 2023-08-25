@@ -2,6 +2,8 @@ import { styled } from "styled-components"
 
 export const Section = styled.section `
 
+background: rgb(242,107,207);
+background: linear-gradient(180deg, rgba(84,230,238,1) 0%, rgba(242,107,207,1) 86%);
 
 .divimgs {
     text-align: center;
@@ -10,6 +12,14 @@ export const Section = styled.section `
             margin-inline-end: 0.5rem;
         }
 }
+
+.h1h1 {
+        font-size: 80px;
+        text-align: center;
+        font-family: 'Tulpen One', cursive;
+        font-weight: 200;
+        margin-bottom: 130px;
+    }
 
 .pinformation{
 
