@@ -5,6 +5,7 @@ export const Section = styled.section `
 background: rgb(242,107,207);
 background: linear-gradient(180deg, rgba(84,230,238,1) 0%, rgba(242,107,207,1) 86%);
 
+
 .divimgs {
     text-align: center;
         .imgsmliniker{
@@ -20,6 +21,7 @@ background: linear-gradient(180deg, rgba(84,230,238,1) 0%, rgba(242,107,207,1) 8
         font-weight: 200;
         margin-bottom: 130px;
     }
+    
 
 .pinformation{
 

@@ -8,9 +8,6 @@ export function Home() {
 
 
         <S.Section>
-
-            <ComponentHeader />
-
             <p className="pinformation">Conheça o trabalho e biografia de artistas!</p>
 
             <div>

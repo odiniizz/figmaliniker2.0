@@ -2,6 +2,7 @@ import * as S from "./styles"
 import React from "react"
 import linikerfundo from "../../assets/linikerfundo.jpg"
 import indigoborboletaanil from "../../assets/indigoborboletaanil.jpg"
+import { ComponentHeader, ComponentFooter } from "../../components"
 
 
 export function Liniker() {
@@ -9,8 +10,13 @@ export function Liniker() {
         <>
 
 
-
         <S.Section>
+
+            <header>
+                <h1 className="h1h1">
+                    Liniker - Musicalidade
+                </h1>
+            </header>
 
         <div>
             <a href="/Vcliniker">
@@ -33,6 +39,10 @@ export function Liniker() {
         </div>
             
         </S.Section>
+
+        <ComponentFooter />
+
+        
 
         </>
     )

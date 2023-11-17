@@ -4,6 +4,7 @@ import linikereoscaramelows from "../../assets/linikereoscaramelows.png"
 import linikermic from "../../assets/linikermic.png"
 import linikerdourada from "../../assets/linikerdourada.png"
 import linikergrammy from "../../assets/linikergrammy.png"
+import { ComponentFooter } from "../../components"
 
 
 export function Vcliniker() {
@@ -42,6 +43,8 @@ export function Vcliniker() {
         
 
         </S.Section>
+
+        <ComponentFooter />
         </>
     )
 }

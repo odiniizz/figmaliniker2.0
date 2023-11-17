@@ -1,11 +1,12 @@
 import * as S from "./styles"
 import linikeratuando from "../../assets/linikeratuando.png"
 import linikerchorando from "../../assets/linikerchorando.png"
+import { ComponentFooter } from "../../components"
 
 
 export function Mliniker () {
     return (
-    
+        <>
             <S.Section>
 
 <header>
@@ -36,6 +37,9 @@ export function Mliniker () {
     
 
     </S.Section>
+
+    <ComponentFooter />
     
+    </>
     )
 } 
