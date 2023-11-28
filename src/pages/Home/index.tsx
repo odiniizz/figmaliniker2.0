@@ -1,7 +1,6 @@
 import * as S from "./styles"
 import linikercapa from "../../assets/linikercapa.jpg"
 import perfilvazio from "../../assets/perfilvazio.webp"
-import { ComponentHeader } from "../../components"
 
 export function Home() {
     return (

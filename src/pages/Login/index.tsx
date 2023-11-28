@@ -4,7 +4,7 @@ import indigoborboletaanil from "../../assets/indigoborboletaanil.jpg"
 import { ComponentFooter } from "../../components"
 
 
-export function Liniker() {
+export function Login() {
     return (
         <>
 

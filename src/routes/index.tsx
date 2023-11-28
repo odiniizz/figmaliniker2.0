@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom"
-import { PageLayout, PageHome, PageLiniker, PageMliniker, PageVcliniker, PagePerfilvazio } from "../pages"
+import { PageCadastrar, PageLogin, PageLayout, PageHome, PageLiniker, PageMliniker, PageVcliniker, PagePerfilvazio, PageLogin } from "../pages"
+import protectedRoute from "./ProtectedRoute";
 
-
-
+const Rotas = () => {}
 export function RouteSoftware() {
     return (
         <Routes>
@@ -12,6 +12,11 @@ export function RouteSoftware() {
                 <Route path="/Mliniker" element={<PageMliniker/>} />
                 <Route path="/Vcliniker" element={<PageVcliniker/>} />
                 <Route path="/Perfilvazio" element={<PagePerfilvazio/>} />
+                <Route path="/Login" element={<PageLogin/>} />
+                <Route path="/Cadastrar" element={<PageCadastrar/>} />
+                <Route element = {<ProtectedRoute />}>
+                    <Route path = "/Adm" element = {PageAdm />}>
+                </Route>
 
             </Route>
             
