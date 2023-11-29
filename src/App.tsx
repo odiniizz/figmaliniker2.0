@@ -1,5 +1,5 @@
 import { GlobalStyle } from "./styles/GlobalStyle";
-import { RouteSoftware } from "./routes"
+import { Rotas } from "./routes/index.tsx"
 import { BrowserRouter } from "react-router-dom"
 
 export function App() {
@@ -7,7 +7,7 @@ export function App() {
     <>
       <BrowserRouter>
         <GlobalStyle />
-        <RouteSoftware />
+        <Rotas />
       </BrowserRouter>
     </>
   )

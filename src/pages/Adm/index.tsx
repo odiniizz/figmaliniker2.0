@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-const Adm = () => {
+export const Adm = () => {
     return (
         <S.Adm>
             Área Administrativa
