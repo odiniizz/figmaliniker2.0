@@ -1,48 +1,74 @@
-import * as S from "./styles"
-import linikerfundo from "../../assets/linikerfundo.jpg"
-import indigoborboletaanil from "../../assets/indigoborboletaanil.jpg"
-import { ComponentFooter } from "../../components"
+import { FormEvent, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { FaKey } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { toast } from "react-toastify";
 
+import * as S from "./styles";
+import { useAuth } from "../../hooks/authHook";
+import { IErrorResponse, IUser } from "../../interfaces/user.interface";
+import { AxiosError } from "axios";
+import  fundo from "../../assets/image 3.png"
 
 export function Login() {
-    return (
-        <>
 
+  const navigate = useNavigate();
+  const { signIn } = useAuth()
+  const [formData, setFormData] = useState<IUser>({
+    email: '',
+    password: '',
+  })
+  async function handleChange(e: IUser) {
+    setFormData((state: IUser | undefined) => ({ ...state, ...e }))
+  }
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    try {
+      const { email, password } = formData
+      await signIn({
+        email: String(email),
+        password: String(password),
+      })
+      toast.success("Login realizado com sucesso!");
+      navigate('/adm')
+    } catch (error) {
+      const err = error as AxiosError<IErrorResponse>
+      toast.error(String(err.response?.data))
+    }
+  }
 
-        <S.Section>
-
-            <header>
-                <h1 className="h1h1">
-                    Liniker - Musicalidade
-                </h1>
-            </header>
-
+  return (
+    <section style={{
+      height:'100vh',
+      backgroundImage: `url(${fundo})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '100%',
+      }}>
+    <S.Section>
+      <h1>Login</h1>
+      <form method="post" onSubmit={handleSubmit}>
+        <label htmlFor="email">E-mail</label>
         <div>
-            <a href="/Vcliniker">
-                <figure>
-                    <img className="capas" src= { linikerfundo } alt="Liniker - Vida e Carreira"/>
-                        <figcaption className="figcaption">
-                            Vida e Carreira
-                        </figcaption>
-                </figure>
-            </a>
-
-            <a href="/Mliniker">
-                <figure>
-                    <img className="capas" src={ indigoborboletaanil } alt="Liniker - Musicalidade"/>
-                        <figcaption className="figcaption">
-                            Musicalidade
-                        </figcaption>
-                </figure>
-                </a>
+          <MdEmail />
+          <input type="email" name="email" id="email" placeholder="E-mail"
+            onChange={(e) => handleChange({ email: e.target.value })}
+            value={formData?.email}
+          />
         </div>
-            
-        </S.Section>
-
-        <ComponentFooter />
-
-        
-
-        </>
-    )
-}
+        <label htmlFor="senha">Senha</label>
+        <div>
+          <FaKey />
+          <input type="password" name="senha" id="senha" placeholder="Senha"
+            onChange={(e) => handleChange({ password: e.target.value })}
+            value={formData?.password}
+          />
+        </div>
+        <p>
+          Não possui conta? <Link to="/cadastrar">Cadastre-se</Link>
+          <button type="submit">Entrar</button>
+        </p>
+      </form>
+    </S.Section>
+    </section>
+  );
+};

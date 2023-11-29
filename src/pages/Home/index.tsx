@@ -1,6 +1,7 @@
 import * as S from "./styles"
 import linikercapa from "../../assets/linikercapa.jpg"
 import perfilvazio from "../../assets/perfilvazio.webp"
+import { ComponentMenu } from "../../components"
 
 export function Home() {
     return (
@@ -8,7 +9,7 @@ export function Home() {
 
         <S.Section>
             <p className="pinformation">Conheça o trabalho e biografia de artistas!</p>
-
+            <ComponentMenu/>
             <div>
                 <a href="/Liniker">
                     <figure>

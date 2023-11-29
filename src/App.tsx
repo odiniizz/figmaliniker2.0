@@ -1,14 +1,21 @@
+import { BrowserRouter } from "react-router-dom"
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { Rotas } from "./routes/index.tsx"
-import { BrowserRouter } from "react-router-dom"
+import { ToastContainer } from "react-toastify"
+import { AuthProvider } from "./contexts/authContext.tsx";
 
-export function App() {
+function App() {
   return (
     <>
       <BrowserRouter>
         <GlobalStyle />
-        <Rotas />
+        <ToastContainer autoClose={3000} />
+        <AuthProvider>
+            <Rotas />
+        </AuthProvider>
       </BrowserRouter>
     </>
-  )
+  );
 }
+
+export default App;
