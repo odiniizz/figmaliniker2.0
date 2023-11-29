@@ -8,10 +8,8 @@ import * as S from "./styles";
 import { useAuth } from "../../hooks/authHook";
 import { IErrorResponse, IUser } from "../../interfaces/user.interface";
 import { AxiosError } from "axios";
-import  fundo from "../../assets/image 3.png"
 
 export function Login() {
-
   const navigate = useNavigate();
   const { signIn } = useAuth()
   const [formData, setFormData] = useState<IUser>({
@@ -38,12 +36,6 @@ export function Login() {
   }
 
   return (
-    <section style={{
-      height:'100vh',
-      backgroundImage: `url(${fundo})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: '100%',
-      }}>
     <S.Section>
       <h1>Login</h1>
       <form method="post" onSubmit={handleSubmit}>
@@ -69,6 +61,5 @@ export function Login() {
         </p>
       </form>
     </S.Section>
-    </section>
   );
 };

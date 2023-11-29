@@ -1,38 +1,50 @@
 import styled from "styled-components"
+import { colors } from "../../styles/GlobalStyle"
 
-export const Section = styled.section `
-    
-background: rgb(242,107,207);
-background: linear-gradient(180deg, rgba(84,230,238,1) 0%, rgba(242,107,207,1) 86%);
-min-height: calc(103vh - 3rem);
-
-.capas {
-        border-radius: 50%;
-        height: 15rem;
-    }
-
-    
+export const Section = styled.section`
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  h1 {
+    color: ${colors.primary};
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  form {
+    background-color: ${colors.thirdLight};
+    border: 0.2rem solid ${colors.third};
+    border-radius: 1rem;
+    padding: 1.5rem;
     div {
-        display: grid;
-        grid-template-columns: auto auto;
-        text-align: center;
-        padding-inline: 30rem;
-        align-items: center;
-        height: 48rem;
+      background-color: ${colors.white};
+      border: 0.15rem solid ${colors.third};
+      border-radius: 0.6rem;
+      display: flex;
+      margin: 0.5rem 0;
+      svg {
+        height: 3rem;
+        width: 3rem;
+        padding: 0.3rem;
+        color: ${colors.third};
+      }
+      input {
+        width: 100%;
+        font-size: 1rem;
+        border: 0;
+        background-color: transparent;
+      }
     }
-
-    .h1h1 {
-        font-size: 80px;
-        text-align: center;
-        font-family: 'Tulpen One', cursive;
-        font-weight: 200;
+    p {
+      margin-top: 1rem;
+      a {
+        text-decoration: none;
+        color: ${colors.black};
+        font-weight: bold;
+      }
     }
-    
-
-.figcaption{
-    padding: 3px;
-    text-align: center;
-    font-size: 25px;
-    color: black;
-}
+  }
 `

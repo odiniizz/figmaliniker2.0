@@ -35,10 +35,10 @@ export function Menu() {
                 ) : (
                   <ul>
                     <li>
-                      <Link to="/login">Login</Link>
+                      <Link to="/Login">Login</Link>
                     </li>
                     <li>
-                      <Link to="/cadastrar">Cadastrar</Link>
+                      <Link to="/Cadastrar">Cadastrar</Link>
                     </li>
                     </ul>
                 )
