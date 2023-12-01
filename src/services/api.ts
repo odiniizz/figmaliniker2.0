@@ -1,6 +1,6 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://127.0.0.1:3333',
+    baseURL: 'https://figmaliniker2-0-g8v9.vercel.app/',
     headers: {
         'Content-Type': 'application/json',
     },
